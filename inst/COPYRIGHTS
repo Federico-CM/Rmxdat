@@ -1,0 +1,41 @@
+Licensing of Rmxdat
+==================
+
+Original package code and documentation contributed by the Rmxdat
+authors are licensed under the MIT license.
+
+Third-party datasets and any accompanying third-party materials
+retain their original licenses and notices. The package's MIT
+license does not replace those terms.
+
+Dataset-specific attribution, license information, and descriptions
+of modifications will be recorded below and in dataset help pages.
+
+Dataset: bienestar_beneficiarios
+-------------------------------
+
+Source institution: Secretaría de Bienestar
+Source resource: Padrón único de beneficiarios consolidado por entidad
+
+Dataset page:
+https://www.datos.gob.mx/dataset/padron_unico_beneficiarios_bienestar
+
+Resource page:
+https://www.datos.gob.mx/dataset/padron_unico_beneficiarios_bienestar/resource/91a2641d-1d9c-46e9-86a6-a0a038b10fd5
+
+Original filename: padron_unico_bienestar.csv
+Downloaded: 2026-10-12
+Dataset page last updated: 2025-06-04
+Observation periods in downloaded file: 2019T1 through 2024T3
+
+License: Creative Commons Attribution 4.0 International (CC BY 4.0),
+as displayed on the source dataset page at download.
+https://creativecommons.org/licenses/by/4.0/
+
+Preparation: Converted five measure columns to numeric, anio to
+integer, and fecha to Date. Retained all rows, column names,
+geographic codes, and numeric values, including the fractional
+intervenciones value for Guerrero in 2019T4.
+
+Rmxdat is an independent project. No endorsement by the source
+institution or affiliation is implied.
