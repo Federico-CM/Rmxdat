@@ -39,3 +39,37 @@ intervenciones value for Guerrero in 2019T4.
 
 Rmxdat is an independent project. No endorsement by the source
 institution or affiliation is implied.
+
+Dataset: pahmt_estatal
+---------------------
+
+Source institution: Auditoría Superior de la Federación (ASF)
+Audited institution: Secretaría de Bienestar
+Source report: Programa de Apoyo para el Bienestar de las Niñas
+y Niños, Hijos de Madres Trabajadoras
+Cuenta Pública: 2024
+Audit number: 295
+Audit identifier: 2024-0-20100-19-0295-2025
+Source page: 17
+Observation year: 2024
+
+Source report:
+https://www.asf.gob.mx/Trans/Informes/IR2024b/Documentos/Auditorias/2024_0295_a.pdf
+
+Reuse basis: The source table is reproduced from an official ASF
+administrative report. Rmxdat relies on Article 14(VIII) of Mexico's
+Ley Federal del Derecho de Autor, which excludes administrative
+texts from copyright protection under that law. Rmxdat claims no
+exclusive rights over the reproduced source data.
+
+Legal reference:
+https://www.diputados.gob.mx/LeyesBiblio/pdf/LFDA.pdf
+
+Preparation: Manually transcribed the state table into a CSV.
+Converted four measure columns to numeric. Preserved supplied
+state names, row order, numeric values, and amounts in thousands
+of Mexican pesos. Checked state uniqueness, missing values,
+and agreement with the published national totals.
+
+Rmxdat is an independent project. No endorsement by the source
+institution or affiliation is implied.
