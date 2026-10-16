@@ -32,10 +32,9 @@ License: Creative Commons Attribution 4.0 International (CC BY 4.0),
 as displayed on the source dataset page at download.
 https://creativecommons.org/licenses/by/4.0/
 
-Preparation: Converted five measure columns to numeric, anio to
-integer, and fecha to Date. Retained all rows, column names,
-geographic codes, and numeric values, including the fractional
-intervenciones value for Guerrero in 2019T4.
+Preparation: Retained all rows, column names, geographic codes,
+and numeric values, including the fractional intervenciones
+value for Guerrero in 2019T4.
 
 Rmxdat is an independent project. No endorsement by the source
 institution or affiliation is implied.
@@ -65,11 +64,42 @@ exclusive rights over the reproduced source data.
 Legal reference:
 https://www.diputados.gob.mx/LeyesBiblio/pdf/LFDA.pdf
 
-Preparation: Manually transcribed the state table into a CSV.
-Converted four measure columns to numeric. Preserved supplied
-state names, row order, numeric values, and amounts in thousands
-of Mexican pesos. Checked state uniqueness, missing values,
-and agreement with the published national totals.
+Preparation: Preserved supplied state names, row order, numeric
+values, and amounts in thousands of Mexican pesos. Checked state
+uniqueness, missing values, and agreement with the published
+national totals.
+
+Rmxdat is an independent project. No endorsement by the source
+institution or affiliation is implied.
+
+Dataset: ppam_estatal
+--------------------
+
+Source institution: Secretaría de Bienestar
+Source report: Cuarto Informe Trimestral 2024: Programas de
+Subsidios del Ramo Administrativo 20-Bienestar
+Program: Programa Pensión para el Bienestar de las Personas
+Adultas Mayores
+Source table: Población Potencial, Objetivo y Atendida
+Source page: 18, including population definitions and table notes
+Observation year: 2024
+
+Source report:
+https://www.gob.mx/cms/uploads/attachment/file/969363/4toInfTrim2024.pdf
+
+Reuse basis: The source table is reproduced from an official
+Secretaría de Bienestar administrative report. Rmxdat relies on
+Article 14(VIII) of Mexico's Ley Federal del Derecho de Autor,
+which excludes administrative texts from copyright protection
+under that law. Rmxdat claims no exclusive rights over the
+reproduced source data.
+
+Legal reference:
+https://www.diputados.gob.mx/LeyesBiblio/pdf/LFDA.pdf
+
+Preparation: Preserved state names, row order, and numeric values,
+including served population counts exceeding target estimates in Michoacán
+and Zacatecas.
 
 Rmxdat is an independent project. No endorsement by the source
 institution or affiliation is implied.

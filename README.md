@@ -13,10 +13,9 @@ Nations or the Mexican government.
 
 ## Development status
 
-The package is in early development and currently contains two datasets.
-The first dataset has been installed and checked locally; checks for the
-newly added dataset are pending. Dataset names, structure, and documentation
-may change.
+The package is in early development and currently contains three datasets.
+The package has been checked locally. Dataset names, structure, and
+documentation may change.
 
 ## Available data
 
@@ -46,6 +45,20 @@ framework indicator 4.a. The national total is 270,256 beneficiaries.
 This program total does not establish an unduplicated count across
 multiple welfare programs.
 
+`ppam_estatal` contains state-level potential, target, and served
+population counts for the Programa Pensión para el Bienestar de las
+Personas Adultas Mayores.
+
+- 32 rows and 4 variables.
+- Annual data for 2024 covering Mexico's 32 states.
+- Potential and target populations are preliminary estimates.
+- Served population counts unique beneficiaries with pension payments
+  during January–December 2024.
+
+Summing the served population across states gives a national PPAM count
+of 12,247,766 beneficiaries. Served counts exceed target estimates in
+Michoacán and Zacatecas; these source values are preserved.
+
 ## Usage
 
 After installing the package locally:
@@ -64,6 +77,11 @@ head(pahmt_estatal)
 
 # National beneficiary count: PAHMT
 with(pahmt_estatal, sum(beneficiarios_A + beneficiarios_B))
+
+head(ppam_estatal)
+
+# National beneficiary count: PPAM
+sum(ppam_estatal$poblacion_atendida)
 ```
 
 Open the dataset help pages for variable definitions, source information,
@@ -72,6 +90,7 @@ preparation details, and known limitations:
 ```r
 ?bienestar_beneficiarios
 ?pahmt_estatal
+?ppam_estatal
 ```
 
 ## Sources
@@ -88,6 +107,11 @@ Superior de la Federación's Cuenta Pública 2024 audit no. 295:
 
 [ASF audit report: Programa de Apoyo para el Bienestar de las Niñas y Niños, Hijos de Madres Trabajadoras](https://www.asf.gob.mx/Trans/Informes/IR2024b/Documentos/Auditorias/2024_0295_a.pdf)
 
+`ppam_estatal` was manually transcribed from the state table on printed
+page 18 of the Secretaría de Bienestar's Cuarto Informe Trimestral 2024:
+
+[Cuarto Informe Trimestral 2024: Programas de Subsidios del Ramo Administrativo 20-Bienestar](https://www.gob.mx/cms/uploads/attachment/file/969363/4toInfTrim2024.pdf)
+
 ## Licensing
 
 Original package code and documentation are licensed under the MIT license.
@@ -96,10 +120,10 @@ The bundled `bienestar_beneficiarios` dataset retains its Creative Commons
 Attribution 4.0 International (CC BY 4.0) license. The package's MIT license
 does not replace the dataset license.
 
-The `pahmt_estatal` source data are reproduced from an official ASF
-administrative report, relying on Article 14(VIII) of Mexico's Ley Federal
-del Derecho de Autor. Rmxdat claims no exclusive rights over these
-source data.
+The `pahmt_estatal` and `ppam_estatal` source data are reproduced from
+official administrative reports of the ASF and Secretaría de Bienestar,
+respectively, relying on Article 14(VIII) of Mexico's Ley Federal del
+Derecho de Autor. Rmxdat claims no exclusive rights over these source data.
 
 See the dataset help pages and the installed `COPYRIGHTS` notice for
 attribution, reuse information, and preparation details.

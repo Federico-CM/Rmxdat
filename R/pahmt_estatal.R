@@ -41,7 +41,7 @@
 #' This is an independent project with no affiliation with the
 #' United Nations or the Mexican government.
 #'
-#'#' @section Reuse:
+#' @section Reuse:
 #' The source data are reproduced from an official ASF administrative
 #' report, relying on Article 14(VIII) of Mexico's Ley Federal del
 #' Derecho de Autor. Rmxdat claims no exclusive rights over these

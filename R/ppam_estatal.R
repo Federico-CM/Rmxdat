@@ -1,0 +1,63 @@
+#' PPAM population estimates and beneficiaries by state, 2024
+#'
+#' State-level counts of the potential, target, and served populations
+#' of Mexico's Programa Pensión para el Bienestar de las Personas
+#' Adultas Mayores for 2024.
+#'
+#' @format A data frame with 32 rows and 4 variables:
+#' \describe{
+#'   \item{entidad}{Character. Name of the Mexican state.}
+#'   \item{poblacion_potencial}{Numeric. Estimated potential population
+#'     of the program for 2024, expressed as a number of people.}
+#'   \item{poblacion_objetivo}{Numeric. Estimated target population
+#'     of the program for 2024, expressed as a number of people.}
+#'   \item{poblacion_atendida}{Numeric. Cumulative number of unique
+#'     beneficiaries who received pension payments during
+#'     January–December 2024, as reported on December 31, 2024.}
+#' }
+#'
+#' @details
+#' The data cover the 32 Mexican states. The observation year is 2024
+#' and is recorded here rather than in a separate dataset column.
+#' National totals are documented below rather than included as a row.
+#'
+#' The program aims to improve social protection for people aged
+#' 65 years or older through a monetary pension. Its target population
+#' comprises Mexican citizens by birth or naturalization who are
+#' aged 65 years or older and currently reside in Mexico.
+#'
+#' The served population measures unique beneficiaries with pension
+#' payments during the year. All three population variables count
+#' people, not monetary amounts.
+#'
+#' The served population exceeds the estimated target population
+#' in Michoacán and Zacatecas. These values reproduce the source
+#' and are retained. The source table does not explain the differences.
+#'
+#' This is an independent project with no affiliation with the
+#' United Nations or the Mexican government.
+#'
+#' @section Reuse:
+#' The source data are reproduced from an official Secretaría de
+#' Bienestar administrative report, relying on Article 14(VIII)
+#' of Mexico's Ley Federal del Derecho de Autor. Rmxdat claims no
+#' exclusive rights over these source data. See the installed
+#' COPYRIGHTS file for attribution, the legal reference, and
+#' preparation details.
+#'
+#' @source
+#' Secretaría de Bienestar.
+#' *Cuarto Informe Trimestral 2024: Programas de Subsidios del
+#' Ramo Administrativo 20-Bienestar*.
+#' Section "Programa Pensión para el Bienestar de las Personas
+#' Adultas Mayores", table "Población Potencial, Objetivo y Atendida",
+#' printed p. 18, including the population definitions and table notes.
+#'
+#' <https://www.gob.mx/cms/uploads/attachment/file/969363/4toInfTrim2024.pdf>
+#'
+#' @examples
+#' head(ppam_estatal)
+#'
+#' # Reconstruct the national number of beneficiaries for 2024: PPAM
+#' sum(ppam_estatal$poblacion_atendida)
+"ppam_estatal"
