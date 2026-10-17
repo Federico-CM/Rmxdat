@@ -63,11 +63,14 @@ Michoacán and Zacatecas; these source values are preserved.
 counts for the Programa Pensión para el Bienestar de las Personas
 con Discapacidad Permanente.
 
-- 32 rows and 5 variables.
+- 32 rows and 7 variables.
 - Annual data for 2024 covering Mexico's 32 states.
 - Preliminary potential and target population estimates.
 - Separate counts of monetary-support and in-kind-support beneficiaries.
 - All numeric variables count people.
+- Includes INEGI state codes (`cve_ent`) and ISO 3166-2 subdivision
+  codes (`iso_3166_2`), added during preparation.
+- Preserves state names as published in the source.
 
 National totals are 1,451,941 monetary-support beneficiaries (PPD) and 23,470
 in-kind-support beneficiaries. These counts must not be added together
@@ -137,6 +140,13 @@ tables on printed pages 18 and 30, respectively, of the Secretaría de
 Bienestar's Cuarto Informe Trimestral 2024:
 
 [Cuarto Informe Trimestral 2024: Programas de Subsidios del Ramo Administrativo 20-Bienestar](https://www.gob.mx/cms/uploads/attachment/file/969363/4toInfTrim2024.pdf)
+
+Geographic codes added to `ppd_estatal` follow INEGI's
+[Clasificaciones del Censo de Población y Vivienda 2020](https://www.inegi.org.mx/contenidos/productos/prod_serv/contenidos/espanol/bvinegi/productos/nueva_estruc/702825198701.pdf),
+printed pages 33–34. ISO 3166-2 codes were checked against the UK
+Permanent Committee on Geographical Names'
+[Mexico: Toponymic Factfile](https://assets.publishing.service.gov.uk/media/67eaae480678ace40a7f27a4/Mexico_Toponymic_Factfile.pdf),
+March 2025, pages 4–6, which cites ISO's Mexico entry.
 
 ## Licensing
 

@@ -133,7 +133,7 @@ https://www.diputados.gob.mx/LeyesBiblio/pdf/LFDA.pdf
 
 Preparation: Manually transcribed the state table. Preserved state
 names, row order, and numeric values, including zero values for
-in-kind support.
+in-kind support. Added cve_ent and iso_3166_2 geographic codes.
 
 Rmxdat is an independent project. No endorsement by the source
 institution or affiliation is implied.
