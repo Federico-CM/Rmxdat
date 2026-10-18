@@ -35,10 +35,13 @@ in 2019T4. This value is preserved and documented.
 assistance for the Programa de Apoyo para el Bienestar de las Niñas
 y Niños, Hijos de Madres Trabajadoras.
 
-- 32 rows and 5 variables.
+- 32 rows and 7 variables.
 - Annual data for 2024 covering Mexico's 32 states.
 - Separate beneficiary counts and amounts for modalities A and B.
 - Amounts expressed in thousands of Mexican pesos.
+- Includes INEGI state codes (`cve_ent`) and ISO 3166-2 subdivision
+  codes (`iso_3166_2`), added during preparation.
+- Preserves state names as published in the source.
 
 The beneficiary columns can be used to calculate PAHMT, a component of
 framework indicator 4.a. The national total is 270,256 beneficiaries.
@@ -144,7 +147,8 @@ Bienestar's Cuarto Informe Trimestral 2024:
 
 [Cuarto Informe Trimestral 2024: Programas de Subsidios del Ramo Administrativo 20-Bienestar](https://www.gob.mx/cms/uploads/attachment/file/969363/4toInfTrim2024.pdf)
 
-Geographic codes added to `ppam_estatal` and `ppd_estatal` follow INEGI's
+Geographic codes added to `pahmt_estatal`, `ppam_estatal`, and
+`ppd_estatal` follow INEGI's
 [Clasificaciones del Censo de Población y Vivienda 2020](https://www.inegi.org.mx/contenidos/productos/prod_serv/contenidos/espanol/bvinegi/productos/nueva_estruc/702825198701.pdf),
 printed pages 33–34. ISO 3166-2 codes were checked against the UK
 Permanent Committee on Geographical Names'

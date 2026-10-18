@@ -67,7 +67,7 @@ https://www.diputados.gob.mx/LeyesBiblio/pdf/LFDA.pdf
 Preparation: Preserved supplied state names, row order, numeric
 values, and amounts in thousands of Mexican pesos. Checked state
 uniqueness, missing values, and agreement with the published
-national totals.
+national totals. Added cve_ent and iso_3166_2 geographic codes.
 
 Rmxdat is an independent project. No endorsement by the source
 institution or affiliation is implied.

@@ -5,9 +5,13 @@
 \alias{pahmt_estatal}
 \title{PAHMT beneficiaries and financial assistance by state, 2024}
 \format{
-A data frame with 32 rows and 5 variables:
+A data frame with 32 rows and 7 variables:
 \describe{
 \item{entidad}{Character. Name of the beneficiary's state of residence.}
+\item{cve_ent}{Character. Two-digit INEGI state code, preserving
+leading zeros.}
+\item{iso_3166_2}{Character. ISO 3166-2 subdivision code,
+including the MX prefix.}
 \item{beneficiarios_A}{Numeric. Number of beneficiaries in modality A.}
 \item{beneficiarios_B}{Numeric. Number of beneficiaries in modality B.}
 \item{importe_A}{Numeric. Amount granted to beneficiaries in modality A,
@@ -25,6 +29,18 @@ Auditoría de Cumplimiento 2024-0-20100-19-0295-2025,
 audit no. 295, p. 17.
 
 \url{https://www.asf.gob.mx/Trans/Informes/IR2024b/Documentos/Auditorias/2024_0295_a.pdf}
+
+Geographic code references:
+
+INEGI. \emph{Clasificaciones del Censo de Población y Vivienda 2020},
+printed pp. 33–34.
+
+\url{https://www.inegi.org.mx/contenidos/productos/prod_serv/contenidos/espanol/bvinegi/productos/nueva_estruc/702825198701.pdf}
+
+UK Permanent Committee on Geographical Names.
+\emph{Mexico: Toponymic Factfile}, March 2025, pp. 4–6.
+
+\url{https://assets.publishing.service.gov.uk/media/67eaae480678ace40a7f27a4/Mexico_Toponymic_Factfile.pdf}
 }
 \usage{
 pahmt_estatal
@@ -59,6 +75,12 @@ Multiply by 1,000 to express the amounts in pesos.
 
 This is an independent project with no affiliation with the
 United Nations or the Mexican government.
+
+Geographic identifiers were added by matching state names, preserving
+source state names, row order, beneficiary counts, financial amounts,
+and monetary units. The source name Estado de México corresponds to
+México; Coahuila, Michoacán, and Veracruz correspond to Coahuila de
+Zaragoza, Michoacán de Ocampo, and Veracruz de Ignacio de la Llave.
 }
 \section{Reuse}{
 
