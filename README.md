@@ -49,11 +49,14 @@ multiple welfare programs.
 population counts for the Programa Pensión para el Bienestar de las
 Personas Adultas Mayores.
 
-- 32 rows and 4 variables.
+- 32 rows and 6 variables.
 - Annual data for 2024 covering Mexico's 32 states.
 - Potential and target populations are preliminary estimates.
 - Served population counts unique beneficiaries with pension payments
   during January–December 2024.
+- Includes INEGI state codes (`cve_ent`) and ISO 3166-2 subdivision
+  codes (`iso_3166_2`), added during preparation.
+- Preserves state names as published in the source.
 
 Summing the served population across states gives a national PPAM count
 of 12,247,766 beneficiaries. Served counts exceed target estimates in
@@ -141,7 +144,7 @@ Bienestar's Cuarto Informe Trimestral 2024:
 
 [Cuarto Informe Trimestral 2024: Programas de Subsidios del Ramo Administrativo 20-Bienestar](https://www.gob.mx/cms/uploads/attachment/file/969363/4toInfTrim2024.pdf)
 
-Geographic codes added to `ppd_estatal` follow INEGI's
+Geographic codes added to `ppam_estatal` and `ppd_estatal` follow INEGI's
 [Clasificaciones del Censo de Población y Vivienda 2020](https://www.inegi.org.mx/contenidos/productos/prod_serv/contenidos/espanol/bvinegi/productos/nueva_estruc/702825198701.pdf),
 printed pages 33–34. ISO 3166-2 codes were checked against the UK
 Permanent Committee on Geographical Names'

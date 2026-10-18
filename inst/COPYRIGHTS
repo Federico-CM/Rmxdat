@@ -99,7 +99,7 @@ https://www.diputados.gob.mx/LeyesBiblio/pdf/LFDA.pdf
 
 Preparation: Preserved state names, row order, and numeric values,
 including served population counts exceeding target estimates in Michoacán
-and Zacatecas.
+and Zacatecas. Added cve_ent and iso_3166_2 geographic codes.
 
 Rmxdat is an independent project. No endorsement by the source
 institution or affiliation is implied.

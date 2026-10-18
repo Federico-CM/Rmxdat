@@ -68,4 +68,63 @@ stopifnot(
 
 # Preserve supplied state names, row order, and population values.
 # Retain served counts above target estimates.
+
+# Geographic codes added during package preparation.
+# cve_ent: INEGI, Clasificaciones del Censo de Poblacion y
+# Vivienda 2020, printed pp. 33-34.
+# https://www.inegi.org.mx/contenidos/productos/prod_serv/contenidos/espanol/bvinegi/productos/nueva_estruc/702825198701.pdf
+#
+# iso_3166_2: checked against PCGN, Mexico: Toponymic Factfile,
+# March 2025, pp. 4-6, which cites ISO 3166-2.
+# https://assets.publishing.service.gov.uk/media/67eaae480678ace40a7f27a4/Mexico_Toponymic_Factfile.pdf
+#
+# Matching names below retain the spelling used in the PPAM CSV.
+state_codes <- data.frame(
+  entidad = c(
+    "Aguascalientes", "Baja California", "Baja California Sur",
+    "Campeche", "Coahuila", "Colima", "Chiapas", "Chihuahua",
+    "Ciudad de México", "Durango", "Guanajuato", "Guerrero",
+    "Hidalgo", "Jalisco", "México", "Michoacán", "Morelos",
+    "Nayarit", "Nuevo León", "Oaxaca", "Puebla", "Querétaro",
+    "Quintana Roo", "San Luis Potosí", "Sinaloa", "Sonora",
+    "Tabasco", "Tamaulipas", "Tlaxcala", "Veracruz",
+    "Yucatán", "Zacatecas"
+  ),
+  cve_ent = sprintf("%02d", 1:32),
+  iso_3166_2 = c(
+    "MX-AGU", "MX-BCN", "MX-BCS", "MX-CAM", "MX-COA",
+    "MX-COL", "MX-CHP", "MX-CHH", "MX-CMX", "MX-DUR",
+    "MX-GUA", "MX-GRO", "MX-HID", "MX-JAL", "MX-MEX",
+    "MX-MIC", "MX-MOR", "MX-NAY", "MX-NLE", "MX-OAX",
+    "MX-PUE", "MX-QUE", "MX-ROO", "MX-SLP", "MX-SIN",
+    "MX-SON", "MX-TAB", "MX-TAM", "MX-TLA", "MX-VER",
+    "MX-YUC", "MX-ZAC"
+  ),
+  stringsAsFactors = FALSE
+)
+
+stopifnot(
+  nrow(state_codes) == 32L,
+  !anyNA(state_codes),
+  !anyDuplicated(state_codes$entidad),
+  !anyDuplicated(state_codes$cve_ent),
+  !anyDuplicated(state_codes$iso_3166_2)
+)
+
+# Match by name, preserving the source row order.
+state_index <- match(ppam_estatal$entidad, state_codes$entidad)
+
+stopifnot(
+  !anyNA(state_index),
+  !anyDuplicated(state_index)
+)
+
+ppam_estatal$cve_ent <- state_codes$cve_ent[state_index]
+ppam_estatal$iso_3166_2 <- state_codes$iso_3166_2[state_index]
+
+# Place geographic identifiers immediately after the source state name.
+ppam_estatal <- ppam_estatal[c(
+  "entidad", "cve_ent", "iso_3166_2", measure_columns
+)]
+
 usethis::use_data(ppam_estatal, overwrite = TRUE)

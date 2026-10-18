@@ -5,9 +5,13 @@
 \alias{ppam_estatal}
 \title{PPAM population estimates and beneficiaries by state, 2024}
 \format{
-A data frame with 32 rows and 4 variables:
+A data frame with 32 rows and 6 variables:
 \describe{
 \item{entidad}{Character. Name of the Mexican state.}
+\item{cve_ent}{Character. Two-digit INEGI state code,
+with leading zeros preserved.}
+\item{iso_3166_2}{Character. ISO 3166-2 subdivision code
+for the Mexican state, including the MX prefix.}
 \item{poblacion_potencial}{Numeric. Estimated potential population
 of the program for 2024, expressed as a number of people.}
 \item{poblacion_objetivo}{Numeric. Estimated target population
@@ -52,6 +56,24 @@ people, not monetary amounts.
 The served population exceeds the estimated target population
 in Michoacán and Zacatecas. These values reproduce the source
 and are retained. The source table does not explain the differences.
+
+Preparation preserved supplied state names, row order, and population
+values. Geographic identifiers cve_ent and iso_3166_2 were added during
+preparation; they are not columns in the source report table.
+
+INEGI codes follow \emph{Clasificaciones del Censo de Población y
+Vivienda 2020}, printed pp. 33–34:
+\url{https://www.inegi.org.mx/contenidos/productos/prod_serv/contenidos/espanol/bvinegi/productos/nueva_estruc/702825198701.pdf}.
+
+ISO 3166-2 codes follow the mapping used for ppd_estatal, checked
+against the UK Permanent Committee on Geographical Names'
+\emph{Mexico: Toponymic Factfile}, March 2025, pp. 4–6, which cites
+ISO's Mexico entry:
+\url{https://assets.publishing.service.gov.uk/media/67eaae480678ace40a7f27a4/Mexico_Toponymic_Factfile.pdf}.
+
+Source names Coahuila, Michoacán, and Veracruz were matched to
+Coahuila de Zaragoza, Michoacán de Ocampo, and Veracruz de
+Ignacio de la Llave, respectively.
 
 This is an independent project with no affiliation with the
 United Nations or the Mexican government.
