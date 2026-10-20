@@ -137,3 +137,43 @@ in-kind support. Added cve_ent and iso_3166_2 geographic codes.
 
 Rmxdat is an independent project. No endorsement by the source
 institution or affiliation is implied.
+
+Dataset: eic_estatal
+-------------------
+
+Source institution: Instituto Nacional de Estadística y Geografía
+(INEGI)
+Source program: Encuesta Intercensal 2025
+Source product: Principales resultados por localidad de 50 000
+y más habitantes
+Selected coverage: 32 state-level records and 10 source variables
+Observation year: 2025
+Downloaded: 2026-10-19
+
+Source page:
+https://www.inegi.org.mx/programas/eic/2025/#datos_abiertos
+
+Reuse terms: Términos de Libre Uso de la Información del INEGI.
+These terms permit copying, redistribution, adaptation, extraction,
+and commercial use, subject to the stated conditions, including
+source attribution, preservation of metadata when distributing
+copies, disclosure of transformations, and avoidance of implied
+INEGI endorsement.
+
+Terms:
+https://www.inegi.org.mx/inegi/terminos.html
+
+Preparation: Used a supplied extract containing 32 state records
+and 10 selected source variables. Preserved original field names,
+state names, row order, and numeric values. Retained CVE_ENT as
+character to preserve leading zeros. Converted population counts,
+median age, and percentages to double. Checked structure, missing
+and blank values, unique state names and codes, numeric
+representation, permissible ranges, and consistency between
+age-group counts and population totals. Variable descriptions
+were adapted to state-level coverage using the supplied source
+data descriptor.
+
+The variable selection and any resulting analyses are the work
+of the package authors. Rmxdat is an independent project.
+No INEGI endorsement, sponsorship, or affiliation is implied.

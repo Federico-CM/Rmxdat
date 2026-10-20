@@ -13,7 +13,7 @@ Nations or the Mexican government.
 
 ## Development status
 
-The package is in early development and currently contains four datasets.
+The package is in early development and currently contains five datasets.
 The package has been checked locally. Dataset names, structure, and
 documentation may change.
 
@@ -83,6 +83,24 @@ in-kind-support beneficiaries. These counts must not be added together
 to calculate the served population because doing so would double-count
 beneficiaries. The source identifies the information as preliminary.
 
+`eic_estatal` contains selected state-level population characteristics
+from INEGI's Encuesta Intercensal 2025.
+
+- 32 rows and 10 variables.
+- Observation year: 2025.
+- Population coverage: residents of occupied private dwellings.
+- Population counts, median age, and selected Indigenous and
+  Afro-Mexican population percentages.
+- Preserves original field names, state names, and values.
+- Includes the source INEGI state identifier (`CVE_ENT`), with leading
+  zeros preserved.
+
+Age-group counts exclude residents whose age was unspecified and
+therefore need not sum to the total population. Indigenous
+self-identification and speaking an Indigenous language are distinct
+measures with different population denominators. The selected extract
+does not include measures of sampling uncertainty.
+
 ## Usage
 
 After installing the package locally:
@@ -115,6 +133,17 @@ sum(ppd_estatal$apoyos_economicos)
 # National in-kind-support beneficiary count
 sum(ppd_estatal$apoyos_en_especie)
 
+head(eic_estatal)
+
+# Population in occupied private dwellings across the 32 states
+sum(eic_estatal$POBTOT)
+
+# States ordered by median age, from highest to lowest
+eic_estatal[
+  order(eic_estatal$MEDIANA_POBTOT, decreasing = TRUE),
+  c("NOM_ENT", "MEDIANA_POBTOT")
+]
+
 ```
 
 Open the dataset help pages for variable definitions, source information,
@@ -125,6 +154,7 @@ preparation details, and known limitations:
 ?pahmt_estatal
 ?ppam_estatal
 ?ppd_estatal
+?eic_estatal
 ```
 
 ## Sources
@@ -155,6 +185,15 @@ Permanent Committee on Geographical Names'
 [Mexico: Toponymic Factfile](https://assets.publishing.service.gov.uk/media/67eaae480678ace40a7f27a4/Mexico_Toponymic_Factfile.pdf),
 March 2025, pages 4–6, which cites ISO's Mexico entry.
 
+`eic_estatal` contains selected state-level records and variables from
+INEGI's Encuesta Intercensal 2025, Principales resultados por localidad
+de 50 000 y más habitantes:
+
+[Encuesta Intercensal 2025 — Open data](https://www.inegi.org.mx/programas/eic/2025/#datos_abiertos)
+
+The source data were downloaded on 2026-10-19. Variable definitions
+were checked against the data descriptor supplied with the download.
+
 ## Licensing
 
 Original package code and documentation are licensed under the MIT license.
@@ -168,6 +207,13 @@ reproduced from official administrative reports. PAHMT comes from the ASF;
 PPAM and PPD come from the Secretaría de Bienestar. Reuse relies on
 Article 14(VIII) of Mexico's Ley Federal del Derecho de Autor.
 Rmxdat claims no exclusive rights over these source data.
+
+The `eic_estatal` source data are provided under the
+[INEGI Terms of Free Use of Information](https://www.inegi.org.mx/inegi/terminos.html).
+These terms require source attribution, preservation of metadata when
+distributing copies, disclosure of transformations, and avoidance of
+implied INEGI endorsement. The package's MIT license does not replace
+these terms.
 
 See the dataset help pages and the installed `COPYRIGHTS` notice for
 attribution, reuse information, and preparation details.
