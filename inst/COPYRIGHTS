@@ -177,3 +177,50 @@ data descriptor.
 The variable selection and any resulting analyses are the work
 of the package authors. Rmxdat is an independent project.
 No INEGI endorsement, sponsorship, or affiliation is implied.
+
+Dataset: poverty
+----------------
+
+Source institution: Instituto Nacional de Estadística y Geografía
+(INEGI)
+Source product: Pobreza Multidimensional (PM) 2024
+Source tables: Grupos de población; Ámbito rural y urbano
+Coverage: National estimates for Mexico
+Observation years: 2016, 2018, 2020, 2022, 2024
+Selected extract: 5 rows and 12 variables
+
+Source page:
+https://www.inegi.org.mx/desarrollosocial/pm/#tabulados
+
+Source filenames recorded in the supplied source information:
+8_pm_gp_2024(1).xlsx
+1_pm_ar_2024.xlsx
+
+The supplied source information attributes the 2024 estimates
+to INEGI calculations using ENIGH 2024 and the CONEVAL methodology,
+and the 2016–2022 estimates to CONEVAL poverty measurement.
+
+Historical source:
+CONEVAL, Anexo estadístico de pobreza 2022
+https://www.coneval.org.mx/Medicion/MP/Paginas/AE_pobreza_2022.aspx
+
+Reuse terms: Términos de Libre Uso de la Información del INEGI.
+These terms permit copying, redistribution, adaptation, extraction,
+and commercial use, subject to the stated conditions, including
+source attribution, preservation of metadata when distributing
+copies, disclosure of transformations, and avoidance of implied
+INEGI endorsement.
+
+Terms:
+https://www.inegi.org.mx/inegi/terminos.html
+
+Preparation: Used a supplied CSV extract. Preserved column names,
+row order, numeric values, and missing values. Converted anio to
+integer and percentage variables to double. Checked dimensions,
+column names, reference years, year uniqueness, numeric text,
+missing-value patterns, and percentage bounds. No rounding or
+imputation was applied.
+
+The variable selection and any resulting analyses are the work
+of the package authors. Rmxdat is an independent project.
+No INEGI endorsement, sponsorship, or affiliation is implied.
