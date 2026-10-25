@@ -13,7 +13,7 @@ Nations or the Mexican government.
 
 ## Development status
 
-The package is in early development and currently contains six datasets.
+The package is in early development and currently contains seven datasets.
 The package has been checked locally. Dataset names, structure, and
 documentation may change.
 
@@ -117,6 +117,20 @@ Missing estimates are represented by `NA`, not zero. Population groups
 overlap, so percentages must not be summed across columns. Differences
 between percentages are expressed in percentage points.
 
+`extreme_poverty` contains national extreme poverty percentages for
+selected population groups, using the CONEVAL methodology.
+
+- 5 rows and 12 variables.
+- Biennial observations from 2016 to 2024, ordered from newest to oldest.
+- National total and estimates by sex, rural or urban residence, age,
+  Indigenous population, Afrodescendant population, and disability.
+- Percentages use each named group's population as the denominator.
+- Afrodescendant estimates are available for 2024 only; disability
+  estimates are available for 2020, 2022, and 2024.
+- Unavailable estimates are represented by `NA`.
+
+Extreme poverty is a component of multidimensional poverty.
+
 ## Usage
 
 After installing the package locally:
@@ -171,6 +185,14 @@ with(
   )
 )
 
+head(extreme_poverty)
+
+# National extreme poverty percentages, ordered by year
+extreme_poverty[
+  order(extreme_poverty$anio),
+  c("anio", "total")
+]
+
 ```
 
 Open the dataset help pages for variable definitions, source information,
@@ -183,6 +205,7 @@ preparation details, and known limitations:
 ?ppd_estatal
 ?eic_estatal
 ?poverty
+?extreme_poverty
 ```
 
 ## Sources
@@ -222,9 +245,9 @@ de 50 000 y más habitantes:
 The source data were downloaded on 2026-10-19. Variable definitions
 were checked against the data descriptor supplied with the download.
 
-`poverty` contains selected national estimates from INEGI's Pobreza
-Multidimensional (PM) 2024, using the Grupos de población and
-Ámbito rural y urbano tables:
+`poverty` and `extreme_poverty` contain selected national estimates
+from INEGI's Pobreza Multidimensional (PM) 2024, using the Grupos
+de población and ámbito rural y urbano tables:
 
 [Pobreza Multidimensional — Tabulados](https://www.inegi.org.mx/desarrollosocial/pm/#tabulados)
 
@@ -232,7 +255,7 @@ The supplied source information attributes the 2024 estimates to
 INEGI calculations using ENIGH 2024 and the CONEVAL methodology,
 and the 2016–2022 estimates to CONEVAL poverty measurement.
 Workbook filenames and selected table locations are recorded in
-the dataset help page.
+the dataset help pages.
 
 ## Licensing
 
@@ -248,8 +271,8 @@ PPAM and PPD come from the Secretaría de Bienestar. Reuse relies on
 Article 14(VIII) of Mexico's Ley Federal del Derecho de Autor.
 Rmxdat claims no exclusive rights over these source data.
 
-The `eic_estatal` and `poverty` source data are provided under the
-[INEGI Terms of Free Use of Information](https://www.inegi.org.mx/inegi/terminos.html).
+The `eic_estatal`, `poverty`, and `extreme_poverty` source data are
+provided under the [INEGI Terms of Free Use of Information](https://www.inegi.org.mx/inegi/terminos.html).
 These terms require source attribution, preservation of metadata when
 distributing copies, disclosure of transformations, and avoidance of
 implied INEGI endorsement. The package's MIT license does not replace

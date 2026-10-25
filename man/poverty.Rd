@@ -12,7 +12,7 @@ A data frame with 5 rows and 12 variables:
 \item{total}{Numeric (double). Percentage of people in
 multidimensional poverty (ODS 1n.1.1).}
 \item{hombres}{Numeric (double). Percentage of men in
-multidimensional poverty.}
+multidimensional poverty (ODS 1n.1.1).}
 \item{mujeres}{Numeric (double). Percentage of women in
 multidimensional poverty (ODS 1n.1.1).}
 \item{rural}{Numeric (double). Percentage of residents of localities
