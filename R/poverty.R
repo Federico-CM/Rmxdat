@@ -9,17 +9,17 @@
 #'   \item{anio}{Integer. Reference year: 2016, 2018, 2020, 2022, or
 #'     2024. Values are unique and nonmissing.}
 #'   \item{total}{Numeric (double). Percentage of people in
-#'     multidimensional poverty.}
+#'     multidimensional poverty (ODS 1n.1.1).}
 #'   \item{hombres}{Numeric (double). Percentage of men in
-#'     multidimensional poverty.}
+#'     multidimensional poverty (ODS 1n.1.1).}
 #'   \item{mujeres}{Numeric (double). Percentage of women in
-#'     multidimensional poverty.}
+#'     multidimensional poverty (ODS 1n.1.1).}
 #'   \item{rural}{Numeric (double). Percentage of residents of localities
-#'     with fewer than 2,500 inhabitants in multidimensional poverty.}
+#'     with fewer than 2,500 inhabitants in multidimensional poverty (ODS 1n.1.1).}
 #'   \item{urbano}{Numeric (double). Percentage of residents of localities
 #'     with 2,500 inhabitants or more in multidimensional poverty.}
 #'   \item{edad_0_5}{Numeric (double). Percentage of children aged 0–5
-#'     years, inclusive, in multidimensional poverty (ODS 1n.1.1).}
+#'     years, inclusive, in multidimensional poverty (ODS 1n.1.1) (ODS 1n.1.1).}
 #'   \item{edad_0_17}{Numeric (double). Percentage of children and
 #'     adolescents aged 0–17 years, inclusive, in multidimensional
 #'     poverty (ODS 1n.1.1).}
