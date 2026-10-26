@@ -1,0 +1,81 @@
+#' Mexican Data for Monitoring Sustainable Development
+#'
+#' @description
+#' Rmxdat provides documented datasets about Mexico to support analysis
+#' of sustainable development, social conditions, and state-level indicators.
+#'
+#' The focus is on data relevant to monitoring the United Nations
+#' Sustainable Development Cooperation Framework for Mexico, 2026–2031.
+#' The relationship between each dataset and specific framework indicators
+#' requires separate verification.
+#'
+#' Rmxdat is an independent project with no affiliation with the United
+#' Nations or the Mexican government.
+#'
+#' @section Available datasets:
+#' State-level administrative data:
+#'
+#' * [bienestar_beneficiarios]: Unique beneficiaries and reported
+#'   interventions from the Secretaría de Bienestar's Padrón Único de
+#'   Beneficiarios, quarterly from 2019T1 through 2024T3. Includes records
+#'   coded as unspecified during 2019–2021.
+#' * [pahmt_estatal]: Beneficiary counts and financial assistance for the
+#'   Programa de Apoyo para el Bienestar de las Niñas y Niños, Hijos de
+#'   Madres Trabajadoras, for 2024. Amounts are expressed in thousands
+#'   of Mexican pesos.
+#' * [ppam_estatal]: Potential, target, and served population counts for
+#'   the Programa Pensión para el Bienestar de las Personas Adultas
+#'   Mayores, for 2024.
+#' * [ppd_estatal]: Population estimates and separate monetary-support
+#'   and in-kind-support beneficiary counts for the Programa Pensión
+#'   para el Bienestar de las Personas con Discapacidad Permanente,
+#'   for 2024.
+#'
+#' State-level population characteristics:
+#'
+#' * [eic_estatal]: Selected population characteristics from INEGI's
+#'   Encuesta Intercensal 2025, covering residents of occupied private
+#'   dwellings. Includes population counts, median age, and selected
+#'   Indigenous and Afro-Mexican population percentages.
+#'
+#' National poverty and deprivation estimates:
+#'
+#' * [poverty]: Multidimensional poverty percentages for the total
+#'   population and selected population groups.
+#' * [extreme_poverty]: Extreme poverty percentages for the total
+#'   population and selected population groups.
+#' * [health_service_access]: Percentages experiencing deprivation
+#'   in access to health services.
+#' * [food_access_deprivation]: Percentages experiencing deprivation
+#'   in access to nutritious, quality food.
+#'
+#' The four national datasets contain biennial observations from
+#' 2016 through 2024. Percentages use a 0–100 scale and the corresponding
+#' population as the denominator. Unavailable estimates are represented
+#' by `NA`. Population groups overlap, so percentages must not be summed
+#' across columns.
+#'
+#' @section Using the data:
+#' Open the linked dataset help pages for variable definitions, coverage,
+#' sources, preparation details, examples, and known limitations.
+#' Definitions and population denominators can differ between datasets.
+#'
+#' @section Development status:
+#' The package is in early development. Dataset names, structure, and
+#' documentation may change.
+#'
+#' @section Licensing and attribution:
+#' Original package code and documentation are licensed under the MIT
+#' license. The reuse conditions for all datasets permit distribution
+#' in this package. Dataset-specific reuse conditions are documented
+#' separately in the dataset help pages and the installed `COPYRIGHTS`
+#' notice. The package's MIT license does not replace these conditions.
+#'
+#' @aliases Rmxdat
+#' @examples
+#' # National poverty percentages in chronological order
+#' poverty[order(poverty$anio), c("anio", "total")]
+#'
+#' # Locate the installed attribution notice
+#' system.file("COPYRIGHTS", package = "Rmxdat")
+"_PACKAGE"
