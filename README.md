@@ -13,7 +13,7 @@ Nations or the Mexican government.
 
 ## Development status
 
-The package is in early development and currently contains seven datasets.
+The package is in early development and currently contains eight datasets.
 The package has been checked locally. Dataset names, structure, and
 documentation may change.
 
@@ -131,6 +131,24 @@ selected population groups, using the CONEVAL methodology.
 
 Extreme poverty is a component of multidimensional poverty.
 
+`health_service_access` contains national percentages of selected
+population groups experiencing deprivation in access to health services,
+using the CONEVAL methodology.
+
+- 5 rows and 12 variables.
+- Biennial observations from 2016 to 2024, ordered from newest to oldest.
+- National total and estimates by sex, rural or urban residence, age,
+  Indigenous population, Afrodescendant population, and disability.
+- Percentages use a 0–100 scale and each named group's population
+  as the denominator.
+- Afrodescendant estimates are available for 2024 only; disability
+  estimates are available for 2020, 2022, and 2024.
+- Unavailable estimates are represented by `NA`.
+
+Higher percentages indicate greater deprivation in access to health
+services. Population groups overlap, so percentages must not be summed
+across columns.
+
 ## Usage
 
 After installing the package locally:
@@ -193,6 +211,14 @@ extreme_poverty[
   c("anio", "total")
 ]
 
+head(health_service_access)
+
+# National health-services deprivation percentages, ordered by year
+health_service_access[
+  order(health_service_access$anio),
+  c("anio", "total")
+]
+
 ```
 
 Open the dataset help pages for variable definitions, source information,
@@ -206,6 +232,7 @@ preparation details, and known limitations:
 ?eic_estatal
 ?poverty
 ?extreme_poverty
+?health_service_access
 ```
 
 ## Sources
@@ -245,9 +272,9 @@ de 50 000 y más habitantes:
 The source data were downloaded on 2026-10-19. Variable definitions
 were checked against the data descriptor supplied with the download.
 
-`poverty` and `extreme_poverty` contain selected national estimates
-from INEGI's Pobreza Multidimensional (PM) 2024, using the Grupos
-de población and ámbito rural y urbano tables:
+`poverty`, `extreme_poverty`, and `health_service_access` contain selected
+national estimates from INEGI's Pobreza Multidimensional (PM) 2024,
+using the Grupos de población and ámbito rural y urbano tables:
 
 [Pobreza Multidimensional — Tabulados](https://www.inegi.org.mx/desarrollosocial/pm/#tabulados)
 
@@ -271,8 +298,9 @@ PPAM and PPD come from the Secretaría de Bienestar. Reuse relies on
 Article 14(VIII) of Mexico's Ley Federal del Derecho de Autor.
 Rmxdat claims no exclusive rights over these source data.
 
-The `eic_estatal`, `poverty`, and `extreme_poverty` source data are
-provided under the [INEGI Terms of Free Use of Information](https://www.inegi.org.mx/inegi/terminos.html).
+The `eic_estatal`, `poverty`, `extreme_poverty`, and
+`health_service_access` source data are provided under the
+[INEGI Terms of Free Use of Information](https://www.inegi.org.mx/inegi/terminos.html).
 These terms require source attribution, preservation of metadata when
 distributing copies, disclosure of transformations, and avoidance of
 implied INEGI endorsement. The package's MIT license does not replace
