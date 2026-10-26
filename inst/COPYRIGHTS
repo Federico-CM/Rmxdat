@@ -321,3 +321,48 @@ are recorded in the dataset help page.
 The variable selection and any resulting analyses are the work
 of the package authors. Rmxdat is an independent project.
 No INEGI endorsement, sponsorship, or affiliation is implied.
+
+Dataset: food_access_deprivation
+-------------------------------
+
+Source institution: Instituto Nacional de Estadística y Geografía
+(INEGI)
+Source product: Pobreza Multidimensional (PM) 2024
+Source tables: Grupos de población; ámbito rural y urbano
+Indicator: Carencia por acceso a la alimentación nutritiva y de calidad
+Coverage: National estimates for Mexico
+Observation years: 2016, 2018, 2020, 2022, 2024
+Selected extract: 5 rows and 15 variables
+
+Source page:
+https://www.inegi.org.mx/desarrollosocial/pm/#tabulados
+
+Source filenames:
+8_pm_gp_2024.xlsx
+1_pm_ar_2024.xlsx
+
+The source information attributes the 2024 estimates to INEGI
+calculations using ENIGH 2024 and the CONEVAL methodology,
+and the 2016–2022 estimates to CONEVAL poverty measurement.
+
+Historical source:
+CONEVAL, Anexo estadístico de pobreza 2022
+https://www.coneval.org.mx/Medicion/MP/Paginas/AE_pobreza_2022.aspx
+
+Reuse terms: Términos de Libre Uso de la Información del INEGI.
+Consult the terms for conditions governing reuse. Retain source
+attribution and relevant metadata, disclose transformations, and
+avoid implying INEGI endorsement.
+
+Terms:
+https://www.inegi.org.mx/inegi/terminos.html
+
+Preparation: Preserved column names, row order, numeric values,
+and missing values. Converted anio to integer and percentage
+variables to double. Checked dimensions, column names, reference
+years, year uniqueness, numeric text, missing-value patterns,
+and percentage bounds. No rounding or imputation was applied.
+
+The variable selection and any resulting analyses are the work
+of the package authors. Rmxdat is an independent project.
+No INEGI endorsement, sponsorship, or affiliation is implied.

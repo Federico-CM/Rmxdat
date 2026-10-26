@@ -13,7 +13,7 @@ Nations or the Mexican government.
 
 ## Development status
 
-The package is in early development and currently contains eight datasets.
+The package is in early development and currently contains nine datasets.
 The package has been checked locally. Dataset names, structure, and
 documentation may change.
 
@@ -149,6 +149,24 @@ Higher percentages indicate greater deprivation in access to health
 services. Population groups overlap, so percentages must not be summed
 across columns.
 
+`food_access_deprivation` contains national percentages of the total
+population and selected population groups experiencing deprivation in
+access to nutritious, quality food.
+
+- 5 rows and 15 variables.
+- Biennial observations from 2016 to 2024, ordered from newest to oldest.
+- National total and estimates by sex, rural or urban residence, six age
+  groups, Indigenous population, Afrodescendant population, and disability.
+- Percentages use a 0–100 scale and the corresponding population
+  as the denominator.
+- Afrodescendant estimates are available for 2024 only; disability
+  estimates are available for 2020, 2022, and 2024.
+- Unavailable estimates are represented by `NA`.
+
+Higher percentages indicate greater food-access deprivation. This
+indicator should not be labeled simply as hunger. Population groups
+overlap, so percentages must not be summed across columns.
+
 ## Usage
 
 After installing the package locally:
@@ -219,6 +237,14 @@ health_service_access[
   c("anio", "total")
 ]
 
+head(food_access_deprivation)
+
+# National food-access deprivation percentages, ordered by year
+food_access_deprivation[
+  order(food_access_deprivation$anio),
+  c("anio", "total")
+]
+
 ```
 
 Open the dataset help pages for variable definitions, source information,
@@ -233,6 +259,7 @@ preparation details, and known limitations:
 ?poverty
 ?extreme_poverty
 ?health_service_access
+?food_access_deprivation
 ```
 
 ## Sources
@@ -272,9 +299,10 @@ de 50 000 y más habitantes:
 The source data were downloaded on 2026-10-19. Variable definitions
 were checked against the data descriptor supplied with the download.
 
-`poverty`, `extreme_poverty`, and `health_service_access` contain selected
-national estimates from INEGI's Pobreza Multidimensional (PM) 2024,
-using the Grupos de población and ámbito rural y urbano tables:
+`poverty`, `extreme_poverty`, `health_service_access`, and
+`food_access_deprivation` contain selected national estimates from
+INEGI's Pobreza Multidimensional (PM) 2024, using the Grupos de población
+and ámbito rural y urbano tables:
 
 [Pobreza Multidimensional — Tabulados](https://www.inegi.org.mx/desarrollosocial/pm/#tabulados)
 
@@ -298,8 +326,9 @@ PPAM and PPD come from the Secretaría de Bienestar. Reuse relies on
 Article 14(VIII) of Mexico's Ley Federal del Derecho de Autor.
 Rmxdat claims no exclusive rights over these source data.
 
-The `eic_estatal`, `poverty`, `extreme_poverty`, and
-`health_service_access` source data are provided under the
+The `eic_estatal`, `poverty`, `extreme_poverty`,
+`health_service_access`, and `food_access_deprivation` source data
+are provided under the
 [INEGI Terms of Free Use of Information](https://www.inegi.org.mx/inegi/terminos.html).
 These terms require source attribution, preservation of metadata when
 distributing copies, disclosure of transformations, and avoidance of
