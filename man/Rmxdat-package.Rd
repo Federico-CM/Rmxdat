@@ -21,10 +21,6 @@ Nations or the Mexican government.
 
 State-level administrative data:
 \itemize{
-\item \link{bienestar_beneficiarios}: Unique beneficiaries and reported
-interventions from the Secretaría de Bienestar's Padrón Único de
-Beneficiarios, quarterly from 2019T1 through 2024T3. Includes records
-coded as unspecified during 2019–2021.
 \item \link{pahmt_estatal}: Beneficiary counts and financial assistance for the
 Programa de Apoyo para el Bienestar de las Niñas y Niños, Hijos de
 Madres Trabajadoras, for 2024. Amounts are expressed in thousands
