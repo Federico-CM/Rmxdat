@@ -5,28 +5,30 @@
 \alias{eic_estatal}
 \title{Selected population characteristics by state, 2025}
 \format{
-A data frame with 32 rows and 10 variables:
+A data frame with 32 rows and 11 variables:
 \describe{
-\item{NOM_ENT}{Character. Name of the Mexican state.}
-\item{CVE_ENT}{Character. Two-digit INEGI state identifier, ranging
+\item{nom_ent}{Character. Name of the Mexican state.}
+\item{cve_ent}{Character. Two-digit INEGI state identifier, ranging
 from "01" to "32", with leading zeros preserved.}
-\item{POBTOT}{Numeric (double). Total number of residents in occupied
+\item{iso_3166_2}{Character. ISO 3166-2 subdivision code for the
+Mexican state, such as "MX-AGU".}
+\item{pobtot}{Numeric (double). Total number of residents in occupied
 private dwellings in the state, including residents whose age
 was unspecified.}
-\item{MEDIANA_POBTOT}{Numeric (double). Median age, in years, of the
+\item{mediana_pobtot}{Numeric (double). Median age, in years, of the
 state's population with specified age.}
-\item{POB0_14}{Numeric (double). Number of residents aged 0--14 years
+\item{pob0_14}{Numeric (double). Number of residents aged 0--14 years
 in the state.}
-\item{POB15_64}{Numeric (double). Number of residents aged 15--64 years
+\item{pob15_64}{Numeric (double). Number of residents aged 15--64 years
 in the state.}
-\item{POB65_MAS}{Numeric (double). Number of residents aged 65 years
+\item{pob65_mas}{Numeric (double). Number of residents aged 65 years
 and older in the state.}
-\item{PCN_POB_IND}{Numeric (double). Percentage of the state's
+\item{pcn_pob_ind}{Numeric (double). Percentage of the state's
 residents who self-identify as Indigenous.}
-\item{PCN_P3YM_HLI}{Numeric (double). Percentage of the state's
+\item{pcn_p3ym_hli}{Numeric (double). Percentage of the state's
 residents aged 3 years and older who speak an Indigenous language.
 The denominator is the population aged 3 years and older.}
-\item{PCN_POB_AFRO}{Numeric (double). Percentage of the state's
+\item{pcn_pob_afro}{Numeric (double). Percentage of the state's
 residents who self-identify as Afro-Mexican or Afro-descendant.}
 }
 }
@@ -41,6 +43,11 @@ Downloaded October 19, 2026.
 
 Variable definitions were checked against the source data
 descriptor supplied with the download.
+
+ISO 3166-2 codes use the package's existing mapping, previously
+checked against the UK Permanent Committee on Geographical Names,
+\href{https://assets.publishing.service.gov.uk/media/67eaae480678ace40a7f27a4/Mexico_Toponymic_Factfile.pdf}{Mexico: Toponymic Factfile},
+March 2025, pages 4--6, which cites ISO's Mexico entry.
 }
 \usage{
 eic_estatal
@@ -61,7 +68,7 @@ Median age is expressed in years. Percentage variables use a
 0--100 scale; for example, 4.37 means 4.37\%.
 
 The three age-group counts exclude residents whose age was
-unspecified and therefore need not sum to \code{POBTOT}.
+unspecified and therefore need not sum to \code{pobtot}.
 
 Indigenous self-identification and speaking an Indigenous language
 are distinct characteristics. The corresponding percentages use
@@ -73,10 +80,13 @@ combined population percentage.
 These are survey estimates. The selected extract does not include
 standard errors, confidence intervals, or coefficients of variation.
 
-Preparation used a supplied extract containing 32 state records
-and 10 selected source variables. Original field names, state names,
-row order, and numeric values were preserved. State identifiers
-were retained as character values to preserve leading zeros.
+Preparation used an extract containing 32 state records and
+10 selected source variables. Converted column names to lowercase.
+Preserved state names, row order, numeric values, and missing values.
+Retained INEGI state identifiers as character values to preserve
+leading zeros. Added ISO 3166-2 subdivision codes by matching
+INEGI state identifiers, using the geographic mapping established
+for the other state-level datasets.
 Preparation checked the structure, missing and blank values,
 unique state names and codes, numeric representation, permissible
 ranges, and consistency between age-group counts and population
@@ -103,18 +113,18 @@ terms, and preparation details.
 head(eic_estatal)
 
 # Population in occupied private dwellings across the 32 states
-sum(eic_estatal$POBTOT)
+sum(eic_estatal$pobtot)
 
 # Residents aged 65 years and older across the 32 states
-sum(eic_estatal$POB65_MAS)
+sum(eic_estatal$pob65_mas)
 
 # States ordered by median age, from highest to lowest
 eic_estatal[
-  order(eic_estatal$MEDIANA_POBTOT, decreasing = TRUE),
-  c("NOM_ENT", "MEDIANA_POBTOT")
+  order(eic_estatal$mediana_pobtot, decreasing = TRUE),
+  c("nom_ent", "mediana_pobtot")
 ]
 
 # Percentage of residents aged 65 years and older in each state
-with(eic_estatal, 100 * POB65_MAS / POBTOT)
+with(eic_estatal, 100 * pob65_mas / pobtot)
 }
 \keyword{datasets}

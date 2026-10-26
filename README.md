@@ -74,14 +74,15 @@ beneficiaries. The source identifies the information as preliminary.
 `eic_estatal` contains selected state-level population characteristics
 from INEGI's Encuesta Intercensal 2025.
 
-- 32 rows and 10 variables.
+- 32 rows and 11 variables.
 - Observation year: 2025.
 - Population coverage: residents of occupied private dwellings.
 - Population counts, median age, and selected Indigenous and
   Afro-Mexican population percentages.
-- Preserves original field names, state names, and values.
-- Includes the source INEGI state identifier (`CVE_ENT`), with leading
-  zeros preserved.
+- Column names standardized to lowercase; state names, row order,
+  and values preserved.
+- Includes the source INEGI state identifier (`cve_ent`), with leading
+  zeros preserved, and ISO 3166-2 subdivision codes (`iso_3166_2`).
 
 Age-group counts exclude residents whose age was unspecified and
 therefore need not sum to the total population. Indigenous
@@ -183,12 +184,12 @@ sum(ppd_estatal$apoyos_en_especie)
 head(eic_estatal)
 
 # Population in occupied private dwellings across the 32 states
-sum(eic_estatal$POBTOT)
+sum(eic_estatal$pobtot)
 
 # States ordered by median age, from highest to lowest
 eic_estatal[
-  order(eic_estatal$MEDIANA_POBTOT, decreasing = TRUE),
-  c("NOM_ENT", "MEDIANA_POBTOT")
+  order(eic_estatal$mediana_pobtot, decreasing = TRUE),
+  c("nom_ent", "mediana_pobtot")
 ]
 
 head(poverty)
@@ -262,6 +263,8 @@ printed pages 33–34. ISO 3166-2 codes were checked against the UK
 Permanent Committee on Geographical Names'
 [Mexico: Toponymic Factfile](https://assets.publishing.service.gov.uk/media/67eaae480678ace40a7f27a4/Mexico_Toponymic_Factfile.pdf),
 March 2025, pages 4–6, which cites ISO's Mexico entry.
+The ISO mapping was also used for `eic_estatal`, matched by its
+existing INEGI state identifier.
 
 `eic_estatal` contains selected state-level records and variables from
 INEGI's Encuesta Intercensal 2025, Principales resultados por localidad

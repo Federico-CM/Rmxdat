@@ -135,16 +135,22 @@ INEGI endorsement.
 Terms:
 https://www.inegi.org.mx/inegi/terminos.html
 
-Preparation: Used a supplied extract containing 32 state records
-and 10 selected source variables. Preserved original field names,
-state names, row order, and numeric values. Retained CVE_ENT as
-character to preserve leading zeros. Converted population counts,
-median age, and percentages to double. Checked structure, missing
-and blank values, unique state names and codes, numeric
-representation, permissible ranges, and consistency between
-age-group counts and population totals. Variable descriptions
-were adapted to state-level coverage using the supplied source
-data descriptor.
+Preparation: Used an extract containing 32 state records and
+10 selected source variables. Converted column names to lowercase.
+Preserved state names, row order, numeric values, and missing values.
+Retained cve_ent as character to preserve leading zeros. Converted
+population counts, median age, and percentages to double. Added
+iso_3166_2 by matching INEGI state identifiers using the package's
+existing geographic mapping. The ISO mapping was previously checked
+against PCGN, Mexico: Toponymic Factfile, March 2025, pages 4–6,
+which cites ISO's Mexico entry:
+https://assets.publishing.service.gov.uk/media/67eaae480678ace40a7f27a4/Mexico_Toponymic_Factfile.pdf
+
+Checked structure, missing and blank values, unique state names
+and codes, numeric representation, permissible ranges, and
+consistency between age-group counts and population totals.
+Variable descriptions were adapted to state-level coverage using
+the supplied source data descriptor.
 
 The variable selection and any resulting analyses are the work
 of the package authors. Rmxdat is an independent project.

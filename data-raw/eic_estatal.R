@@ -4,8 +4,9 @@
 # https://www.inegi.org.mx/programas/eic/2025/#datos_abiertos
 # Download date: 2026-10-19.
 #
-# Input: user-supplied extract containing 32 state records and
-# 10 selected source variables. Preserve names, values, and row order.
+# Input: extract containing 32 state records and 10 source variables.
+# Convert column names to lowercase and add ISO 3166-2 codes.
+# Preserve state names, INEGI codes, row order, and numeric values.
 
 eic_estatal <- read.csv(
   "data-raw/eic_estatal.csv",
@@ -92,6 +93,63 @@ age_group_total <- with(
 )
 
 stopifnot(all(age_group_total <= eic_estatal$POBTOT))
+
+# Standardize column names after validating the source fields.
+names(eic_estatal) <- tolower(names(eic_estatal))
+
+# Reuse the geographic mapping established for the other state datasets.
+# ISO codes: PCGN, Mexico: Toponymic Factfile, March 2025, pp. 4-6,
+# which cites ISO 3166-2.
+# https://assets.publishing.service.gov.uk/media/67eaae480678ace40a7f27a4/Mexico_Toponymic_Factfile.pdf
+state_codes <- data.frame(
+  cve_ent = sprintf("%02d", 1:32),
+  iso_3166_2 = c(
+    "MX-AGU", "MX-BCN", "MX-BCS", "MX-CAM", "MX-COA",
+    "MX-COL", "MX-CHP", "MX-CHH", "MX-CMX", "MX-DUR",
+    "MX-GUA", "MX-GRO", "MX-HID", "MX-JAL", "MX-MEX",
+    "MX-MIC", "MX-MOR", "MX-NAY", "MX-NLE", "MX-OAX",
+    "MX-PUE", "MX-QUE", "MX-ROO", "MX-SLP", "MX-SIN",
+    "MX-SON", "MX-TAB", "MX-TAM", "MX-TLA", "MX-VER",
+    "MX-YUC", "MX-ZAC"
+  ),
+  stringsAsFactors = FALSE
+)
+
+stopifnot(
+  nrow(state_codes) == 32L,
+  !anyNA(state_codes),
+  !anyDuplicated(state_codes$cve_ent),
+  !anyDuplicated(state_codes$iso_3166_2)
+)
+
+# Match by INEGI identifier, preserving source row order.
+state_index <- match(eic_estatal$cve_ent, state_codes$cve_ent)
+
+stopifnot(
+  !anyNA(state_index),
+  !anyDuplicated(state_index)
+)
+
+eic_estatal$iso_3166_2 <- state_codes$iso_3166_2[state_index]
+
+# Place ISO codes immediately after the existing INEGI identifier.
+eic_estatal <- eic_estatal[c(
+  "nom_ent", "cve_ent", "iso_3166_2",
+  tolower(expected_names[-c(1, 2)])
+)]
+
+stopifnot(
+  identical(dim(eic_estatal), c(32L, 11L)),
+  identical(names(eic_estatal), c(
+    "nom_ent", "cve_ent", "iso_3166_2", "pobtot",
+    "mediana_pobtot", "pob0_14", "pob15_64", "pob65_mas",
+    "pcn_pob_ind", "pcn_p3ym_hli", "pcn_pob_afro"
+  )),
+  is.character(eic_estatal$cve_ent),
+  identical(sort(eic_estatal$cve_ent), sprintf("%02d", 1:32)),
+  !anyNA(eic_estatal$iso_3166_2),
+  !anyDuplicated(eic_estatal$iso_3166_2)
+)
 
 # Save after all validation and conversion.
 usethis::use_data(eic_estatal, overwrite = TRUE)
