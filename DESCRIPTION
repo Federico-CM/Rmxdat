@@ -1,23 +1,27 @@
 Package: Rmxdat
 Title: Mexican Data for Monitoring Sustainable Development
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R:
     person("Federico", "Castro Monzon",
-           email = "maintainer@example.org",
+           email = "fcastro.rpackages@gmail.com",
            role = c("aut", "cre"))
 Description: Provides documented datasets about Mexico to support
     analysis of sustainable development, social conditions, and
-    state-level indicators. The initial focus is on datasets relevant
-    to monitoring the United Nations Sustainable Development
-    Cooperation Framework for Mexico, 2026-2031. Documentation records
-    data sources, coverage, transformations, and reuse conditions.
-    This is an independent project with no affiliation with the
-    United Nations or the Mexican government.
+    state-level indicators. Includes state-level population and
+    social-program indicators and national poverty and deprivation
+    estimates. The initial focus is on datasets relevant to monitoring
+    the United Nations Sustainable Development Cooperation Framework
+    for Mexico, 2026-2031. Documentation records data sources, coverage,
+    transformations, and reuse conditions. This is an independent
+    project with no affiliation with the United Nations or the
+    Mexican government.
 License: MIT + file LICENSE
 Copyright: See inst/COPYRIGHTS for dataset attribution and licensing.
+URL: https://github.com/Federico-CM/Rmxdat
+BugReports: https://github.com/Federico-CM/Rmxdat/issues
 Config/roxygen2/version: 8.1.1
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-Depends: 
+Depends:
     R (>= 3.5)
 LazyData: true

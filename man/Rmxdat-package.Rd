@@ -90,12 +90,20 @@ poverty[order(poverty$anio), c("anio", "total")]
 # Locate the installed attribution notice
 system.file("COPYRIGHTS", package = "Rmxdat")
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/Federico-CM/Rmxdat}
+  \item Report bugs at \url{https://github.com/Federico-CM/Rmxdat/issues}
+}
+
+}
 \author{
-\strong{Maintainer}: Federico Castro Monzon \email{maintainer@example.org}
+\strong{Maintainer}: Federico Castro Monzon \email{fcastro.rpackages@gmail.com}
 
 Authors:
 \itemize{
-  \item Federico Castro Monzon \email{maintainer@example.org}
+  \item Federico Castro Monzon \email{fcastro.rpackages@gmail.com}
 }
 
 }
