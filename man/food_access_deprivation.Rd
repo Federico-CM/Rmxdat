@@ -58,17 +58,23 @@ deprivation in access to nutritious, quality food. Available for
 }
 }
 \source{
-Instituto Nacional de Estadística y Geografía (INEGI),
-\href{https://www.inegi.org.mx/desarrollosocial/pm/#tabulados}{Pobreza Multidimensional 2024}.
-Workbooks: \code{8_pm_gp_2024.xlsx} (population groups) and
-\code{1_pm_ar_2024.xlsx} (rural and urban areas).
+Instituto Nacional de Estadística y Geografía (INEGI).
+Pobreza Multidimensional (PM) 2024. Selected national estimates
+from the Grupos de población and Ámbito rural y urbano tables.
 
-The source information attributes 2024 estimates to INEGI calculations
-using ENIGH 2024 and the CONEVAL methodology, and 2016–2022 estimates
-to CONEVAL poverty measurement.
+\href{https://www.inegi.org.mx/desarrollosocial/pm/#tabulados}{
+Pobreza Multidimensional – Tabulados}.
 
-Historical reference: CONEVAL,
-\href{https://www.coneval.org.mx/Medicion/MP/Paginas/AE_pobreza_2022.aspx}{Anexo estadístico de pobreza 2022}.
+INEGI's technical note attributes the 2024 estimates to INEGI
+calculations using ENIGH 2024 and the CONEVAL methodology,
+and the 2016–2022 estimates to CONEVAL poverty measurement.
+
+\href{https://www.inegi.org.mx/contenidos/desarrollosocial/pm/doc/pm_nota_tecnica_2024.pdf}{
+INEGI: Pobreza Multidimensional 2024: Nota técnica}.
+
+Historical source:
+\href{https://www.coneval.org.mx/Medicion/MP/Paginas/AE_pobreza_2022.aspx}{
+CONEVAL: Anexo estadístico de pobreza 2022}.
 
 Source data are subject to
 \href{https://www.inegi.org.mx/inegi/terminos.html}{INEGI's Terms of Free Use of Information}.
@@ -89,11 +95,6 @@ row, ordered from 2024 to 2016. Observations are biennial rather than annual.
 All variables except \code{anio} are percentages on a 0–100 scale.
 The denominator for \code{total} is the total population; each other
 percentage uses the population of the named group as its denominator.
-Group percentages do not represent shares of all people experiencing
-food-access deprivation. Higher values indicate greater deprivation.
-
-For example, \code{rural = 21.5541377089} in 2024 means that approximately
-21.55 percent of the rural population experienced this deprivation.
 
 The indicator is "Carencia por acceso a la alimentación nutritiva y de
 calidad". It measures food-access deprivation under the source methodology

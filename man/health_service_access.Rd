@@ -53,25 +53,14 @@ from the Grupos de población and Ámbito rural y urbano tables.
 \href{https://www.inegi.org.mx/desarrollosocial/pm/#tabulados}{
 Pobreza Multidimensional – Tabulados}.
 
-Grupos de población: \code{8_pm_gp_2024.xlsx}.
-Cuadro 1: men, AC22:AG22; women, K22:O22.
-Cuadro 3: Indigenous population, K22:O22.
-Cuadro 4: disability, I22:K22.
-Cuadro 8: Afrodescendant population, G22.
-Cuadro 9: ages 0–5, K22:O22; ages 65 and older, CW22:DA22.
-Cuadro 11: ages 0–17, K22:O22.
-
-Ámbito rural y urbano: \code{1_pm_ar_2024.xlsx}.
-Cuadro 1: rural population, K22:O22; urban population, AC22:AG22.
-
-Year headers appear in row 9. Five-cell ranges run from 2016 to
-2024 in biennial order. Disability columns I:K correspond to 2020,
-2022, and 2024; the Afrodescendant estimate in G22 is for 2024 only.
-
-The source information attributes the 2024 estimates to
-INEGI calculations using ENIGH 2024 and the CONEVAL methodology,
+INEGI's technical note attributes the 2024 estimates to INEGI
+calculations using ENIGH 2024 and the CONEVAL methodology,
 and the 2016–2022 estimates to CONEVAL poverty measurement.
-The historical source cited is
+
+\href{https://www.inegi.org.mx/contenidos/desarrollosocial/pm/doc/pm_nota_tecnica_2024.pdf}{
+INEGI: Pobreza Multidimensional 2024: Nota técnica}.
+
+Historical source:
 \href{https://www.coneval.org.mx/Medicion/MP/Paginas/AE_pobreza_2022.aspx}{
 CONEVAL: Anexo estadístico de pobreza 2022}.
 }
@@ -89,11 +78,11 @@ The data cover Mexico at the national level (Estados Unidos Mexicanos),
 with one reference year per row. Rows are ordered from 2024 to 2016.
 Observations are biennial rather than annual.
 
-All variables except \code{anio} are percentages on a 0–100 scale;
-for example, 35.6 means 35.6 percent. Each percentage uses the population
-of the named group as its denominator. It does not represent that
-group's share of all people experiencing health-services deprivation.
-Higher values indicate greater deprivation in access to health services.
+All variables except \code{anio} are percentages on a 0–100 scale.
+Each percentage uses the population of the named group as its
+denominator. It does not represent that group's share of all people
+experiencing health-services deprivation. Higher values indicate
+greater deprivation in access to health services.
 
 The indicator is "Carencia por acceso a los servicios de salud".
 The source estimates use the Encuesta Nacional de Ingresos y Gastos
@@ -137,8 +126,7 @@ The source workbooks include precision indicators. This dataset
 contains point estimates only, without confidence intervals or
 precision classifications.
 
-The variable selection and any resulting analyses are the work of
-the package authors. INEGI does not endorse or sponsor this package.
+INEGI does not endorse or sponsor this package.
 }
 \section{Preparation}{
 

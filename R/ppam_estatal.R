@@ -38,8 +38,8 @@
 #' in Michoacán and Zacatecas. These values reproduce the source
 #' and are retained. The source table does not explain the differences.
 #'
-#' Preparation preserved supplied state names, row order, and population
-#' values. Geographic identifiers cve_ent and iso_3166_2 were added during
+#' Preparation preserved state names, row order, and population values.
+#' Geographic identifiers cve_ent and iso_3166_2 were added during
 #' preparation; they are not columns in the source report table.
 #'
 #' INEGI codes follow *Clasificaciones del Censo de Población y

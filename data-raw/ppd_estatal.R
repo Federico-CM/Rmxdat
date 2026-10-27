@@ -3,10 +3,9 @@
 # Source: Secretaria de Bienestar.
 # Cuarto Informe Trimestral 2024.
 # Table: "Poblacion Potencial, Objetivo y Atendida", printed page 30.
-# Source location supplied by the package author.
 # https://www.gob.mx/cms/uploads/attachment/file/969363/4toInfTrim2024.pdf
 #
-# Input: manual transcription of the supplied state table.
+# Input: manual transcription of the state table in the source report.
 # Observation year: 2024.
 # All four measures count people, not amounts or support transactions.
 
@@ -65,8 +64,8 @@ stopifnot(
   ))
 )
 
-# Preserve supplied state names, row order, and numeric values,
-# including zero values for in-kind support.
+# Preserve state names, row order, and numeric values as published
+# in the source, including zero values for in-kind support.
 
 # Geographic codes added during package preparation.
 # cve_ent: INEGI, Clasificaciones del Censo de Poblacion y

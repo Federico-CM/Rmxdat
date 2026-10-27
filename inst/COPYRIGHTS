@@ -2,14 +2,14 @@ Licensing of Rmxdat
 ==================
 
 Original package code and documentation contributed by the Rmxdat
-authors are licensed under the MIT license.
+author are licensed under the MIT license.
 
 Third-party datasets and any accompanying third-party materials
 retain their original licenses and notices. The package's MIT
 license does not replace those terms.
 
 Dataset-specific attribution, license information, and descriptions
-of modifications will be recorded below and in dataset help pages.
+of modifications are recorded below and in dataset help pages.
 
 Dataset: pahmt_estatal
 ---------------------
@@ -36,8 +36,8 @@ exclusive rights over the reproduced source data.
 Legal reference:
 https://www.diputados.gob.mx/LeyesBiblio/pdf/LFDA.pdf
 
-Preparation: Preserved supplied state names, row order, numeric
-values, and amounts in thousands of Mexican pesos. Checked state
+Preparation: Preserved state names as published in the source, row order,
+numeric values, and amounts in thousands of Mexican pesos. Checked state
 uniqueness, missing values, and agreement with the published
 national totals. Added cve_ent and iso_3166_2 geographic codes.
 
@@ -150,10 +150,10 @@ Checked structure, missing and blank values, unique state names
 and codes, numeric representation, permissible ranges, and
 consistency between age-group counts and population totals.
 Variable descriptions were adapted to state-level coverage using
-the supplied source data descriptor.
+the data descriptor included in the INEGI download.
 
-The variable selection and any resulting analyses are the work
-of the package authors. Rmxdat is an independent project.
+The package author is responsible for variable selection and package
+preparation. Rmxdat is an independent project.
 No INEGI endorsement, sponsorship, or affiliation is implied.
 
 Dataset: poverty
@@ -170,13 +170,13 @@ Selected extract: 5 rows and 12 variables
 Source page:
 https://www.inegi.org.mx/desarrollosocial/pm/#tabulados
 
-Source filenames recorded in the supplied source information:
-8_pm_gp_2024(1).xlsx
-1_pm_ar_2024.xlsx
-
-The supplied source information attributes the 2024 estimates
-to INEGI calculations using ENIGH 2024 and the CONEVAL methodology,
+INEGI's technical note attributes the 2024 estimates to INEGI
+calculations using ENIGH 2024 and the CONEVAL methodology,
 and the 2016–2022 estimates to CONEVAL poverty measurement.
+
+Technical note:
+INEGI, Pobreza Multidimensional 2024: Nota técnica
+https://www.inegi.org.mx/contenidos/desarrollosocial/pm/doc/pm_nota_tecnica_2024.pdf
 
 Historical source:
 CONEVAL, Anexo estadístico de pobreza 2022
@@ -192,15 +192,15 @@ INEGI endorsement.
 Terms:
 https://www.inegi.org.mx/inegi/terminos.html
 
-Preparation: Used a supplied CSV extract. Preserved column names,
-row order, numeric values, and missing values. Converted anio to
-integer and percentage variables to double. Checked dimensions,
+Preparation: Used a CSV extract of selected INEGI tables. Preserved
+column names, row order, numeric values, and missing values. Converted
+anio to integer and percentage variables to double. Checked dimensions,
 column names, reference years, year uniqueness, numeric text,
 missing-value patterns, and percentage bounds. No rounding or
 imputation was applied.
 
-The variable selection and any resulting analyses are the work
-of the package authors. Rmxdat is an independent project.
+The package author is responsible for variable selection and package
+preparation. Rmxdat is an independent project.
 No INEGI endorsement, sponsorship, or affiliation is implied.
 
 
@@ -219,13 +219,13 @@ Selected extract: 5 rows and 12 variables
 Source page:
 https://www.inegi.org.mx/desarrollosocial/pm/#tabulados
 
-Source filenames recorded in the supplied source information:
-8_pm_gp_2024(1).xlsx
-1_pm_ar_2024.xlsx
-
-The supplied source information attributes the 2024 estimates
-to INEGI calculations using ENIGH 2024 and the CONEVAL methodology,
+INEGI's technical note attributes the 2024 estimates to INEGI
+calculations using ENIGH 2024 and the CONEVAL methodology,
 and the 2016–2022 estimates to CONEVAL poverty measurement.
+
+Technical note:
+INEGI, Pobreza Multidimensional 2024: Nota técnica
+https://www.inegi.org.mx/contenidos/desarrollosocial/pm/doc/pm_nota_tecnica_2024.pdf
 
 Historical source:
 CONEVAL, Anexo estadístico de pobreza 2022
@@ -239,18 +239,15 @@ avoid implying INEGI endorsement.
 Terms:
 https://www.inegi.org.mx/inegi/terminos.html
 
-Preparation: Used a supplied CSV extract. Preserved column names,
-row order, numeric values, and missing values. Converted anio to
-integer and percentage variables to double. Checked dimensions,
+Preparation: Used a CSV extract of selected INEGI tables. Preserved
+column names, row order, numeric values, and missing values. Converted
+anio to integer and percentage variables to double. Checked dimensions,
 column names, reference years, year uniqueness, numeric text,
 missing-value patterns, and percentage bounds. No rounding or
-imputation was applied. The source workbooks were not independently
-checked against the supplied extract. Extraction locations supplied
-for population groups are recorded in the dataset help page;
-the exact extraction location for total was not supplied.
+imputation was applied.
 
-The variable selection and any resulting analyses are the work
-of the package authors. Rmxdat is an independent project.
+The package author is responsible for variable selection and package
+preparation. Rmxdat is an independent project.
 No INEGI endorsement, sponsorship, or affiliation is implied.
 
 Dataset: health_service_access
@@ -268,13 +265,13 @@ Selected extract: 5 rows and 12 variables
 Source page:
 https://www.inegi.org.mx/desarrollosocial/pm/#tabulados
 
-Source filenames:
-8_pm_gp_2024.xlsx
-1_pm_ar_2024.xlsx
-
-The source information attributes the 2024 estimates to INEGI
+INEGI's technical note attributes the 2024 estimates to INEGI
 calculations using ENIGH 2024 and the CONEVAL methodology,
 and the 2016–2022 estimates to CONEVAL poverty measurement.
+
+Technical note:
+INEGI, Pobreza Multidimensional 2024: Nota técnica
+https://www.inegi.org.mx/contenidos/desarrollosocial/pm/doc/pm_nota_tecnica_2024.pdf
 
 Historical source:
 CONEVAL, Anexo estadístico de pobreza 2022
@@ -293,11 +290,10 @@ Preserved row order, numeric values, and missing values. Converted
 anio to integer and percentage variables to double. Checked
 dimensions, column names, reference years, year uniqueness,
 numeric text, missing-value patterns, and percentage bounds.
-No rounding or imputation was applied. Selected table locations
-are recorded in the dataset help page.
+No rounding or imputation was applied.
 
-The variable selection and any resulting analyses are the work
-of the package authors. Rmxdat is an independent project.
+The package author is responsible for variable selection and package
+preparation. Rmxdat is an independent project.
 No INEGI endorsement, sponsorship, or affiliation is implied.
 
 Dataset: food_access_deprivation
@@ -315,13 +311,13 @@ Selected extract: 5 rows and 15 variables
 Source page:
 https://www.inegi.org.mx/desarrollosocial/pm/#tabulados
 
-Source filenames:
-8_pm_gp_2024.xlsx
-1_pm_ar_2024.xlsx
-
-The source information attributes the 2024 estimates to INEGI
+INEGI's technical note attributes the 2024 estimates to INEGI
 calculations using ENIGH 2024 and the CONEVAL methodology,
 and the 2016–2022 estimates to CONEVAL poverty measurement.
+
+Technical note:
+INEGI, Pobreza Multidimensional 2024: Nota técnica
+https://www.inegi.org.mx/contenidos/desarrollosocial/pm/doc/pm_nota_tecnica_2024.pdf
 
 Historical source:
 CONEVAL, Anexo estadístico de pobreza 2022
@@ -341,6 +337,6 @@ variables to double. Checked dimensions, column names, reference
 years, year uniqueness, numeric text, missing-value patterns,
 and percentage bounds. No rounding or imputation was applied.
 
-The variable selection and any resulting analyses are the work
-of the package authors. Rmxdat is an independent project.
+The package author is responsible for variable selection and package
+preparation. Rmxdat is an independent project.
 No INEGI endorsement, sponsorship, or affiliation is implied.

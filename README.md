@@ -272,8 +272,9 @@ de 50 000 y más habitantes:
 
 [Encuesta Intercensal 2025 — Open data](https://www.inegi.org.mx/programas/eic/2025/#datos_abiertos)
 
-The source data were downloaded on 2026-10-19. Variable definitions
-were checked against the data descriptor supplied with the download.
+The source data were downloaded on 2026-10-19.
+During package preparation, variable definitions were checked against the
+data descriptor included in the INEGI download.
 
 `poverty`, `extreme_poverty`, `health_service_access`, and
 `food_access_deprivation` contain selected national estimates from
@@ -282,11 +283,11 @@ and ámbito rural y urbano tables:
 
 [Pobreza Multidimensional — Tabulados](https://www.inegi.org.mx/desarrollosocial/pm/#tabulados)
 
-The supplied source information attributes the 2024 estimates to
-INEGI calculations using ENIGH 2024 and the CONEVAL methodology,
+INEGI's technical note attributes the 2024 estimates to INEGI
+calculations using ENIGH 2024 and the CONEVAL methodology,
 and the 2016–2022 estimates to CONEVAL poverty measurement.
-Workbook filenames and selected table locations are recorded in
-the dataset help pages.
+
+[INEGI: Pobreza Multidimensional 2024: Nota técnica](https://www.inegi.org.mx/contenidos/desarrollosocial/pm/doc/pm_nota_tecnica_2024.pdf)
 
 ## Licensing
 

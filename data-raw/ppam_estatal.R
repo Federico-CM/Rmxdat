@@ -5,7 +5,7 @@
 # Table: "Poblacion Potencial, Objetivo y Atendida", printed page 18.
 # https://www.gob.mx/cms/uploads/attachment/file/969363/4toInfTrim2024.pdf
 #
-# Input: manual transcription of the supplied state table.
+# Input: manual transcription of the state table in the source report.
 # Observation year: 2024.
 # All population measures count people.
 
@@ -66,7 +66,7 @@ stopifnot(
   ))
 )
 
-# Preserve supplied state names, row order, and population values.
+# Preserve state names, row order, and population values.
 # Retain served counts above target estimates.
 
 # Geographic codes added during package preparation.

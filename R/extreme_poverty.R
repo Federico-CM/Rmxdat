@@ -87,17 +87,14 @@
 #' contains point estimates only, without confidence intervals or
 #' precision classifications.
 #'
-#' The variable selection and any resulting analyses are the work of
-#' the package authors. INEGI does not endorse or sponsor this package.
+#' INEGI does not endorse or sponsor this package.
 #'
 #' @section Preparation:
-#' Prepared from a supplied CSV extract. Preserved the supplied column
-#' names, row order, numeric values, and missing values. Converted
-#' \code{anio} to integer and percentage variables to double.
+#' Preserved column names, row order, numeric values, and missing values.
+#' Converted \code{anio} to integer and percentage variables to double.
 #' Validated dimensions, column names, reference years, year uniqueness,
 #' numeric text, missing-value patterns, and percentage bounds.
-#' No rounding or imputation was applied. The source workbooks were
-#' not independently checked against the supplied extract.
+#' No rounding or imputation was applied.
 #'
 #' @section Reuse:
 #' Consult the
@@ -114,30 +111,14 @@
 #' \href{https://www.inegi.org.mx/desarrollosocial/pm/#tabulados}{
 #' Pobreza Multidimensional – Tabulados}.
 #'
-#' Extraction locations recorded in the supplied source information
-#' refer to row 13, "Población en situación de pobreza extrema",
-#' using columns labeled "Porcentaje".
-#'
-#' Grupos de población: \code{8_pm_gp_2024(1).xlsx}.
-#' Cuadro 1: men, AC13:AG13; women, K13:O13.
-#' Cuadro 3: Indigenous population, K13:O13.
-#' Cuadro 4: disability, I13:K13.
-#' Cuadro 8: Afrodescendant population, G13.
-#' Cuadro 9: ages 0–5, K13:O13; ages 65 and older, CW13:DA13.
-#' Cuadro 11: ages 0–17, K13:O13.
-#'
-#' Ámbito rural y urbano: \code{1_pm_ar_2024.xlsx}.
-#' Cuadro 1: rural population, K13:O13; urban population, AC13:AG13.
-#'
-#' Year headers appear in row 9. Five-cell ranges run from 2016 to
-#' 2024 in biennial order. Disability columns I:K correspond to 2020,
-#' 2022, and 2024; the Afrodescendant estimate is for 2024 only.
-#' The exact extraction location for \code{total} was not supplied.
-#'
-#' The supplied source information attributes the 2024 estimates to
-#' INEGI calculations using ENIGH 2024 and the CONEVAL methodology,
+#' INEGI's technical note attributes the 2024 estimates to INEGI
+#' calculations using ENIGH 2024 and the CONEVAL methodology,
 #' and the 2016–2022 estimates to CONEVAL poverty measurement.
-#' The historical source cited is
+#'
+#' \href{https://www.inegi.org.mx/contenidos/desarrollosocial/pm/doc/pm_nota_tecnica_2024.pdf}{
+#' INEGI: Pobreza Multidimensional 2024: Nota técnica}.
+#'
+#' Historical source:
 #' \href{https://www.coneval.org.mx/Medicion/MP/Paginas/AE_pobreza_2022.aspx}{
 #' CONEVAL: Anexo estadístico de pobreza 2022}.
 #'

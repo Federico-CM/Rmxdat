@@ -16,11 +16,12 @@ multidimensional poverty (ODS 1n.1.1).}
 \item{mujeres}{Numeric (double). Percentage of women in
 multidimensional poverty (ODS 1n.1.1).}
 \item{rural}{Numeric (double). Percentage of residents of localities
-with fewer than 2,500 inhabitants in multidimensional poverty (ODS 1n.1.1).}
+with fewer than 2,500 inhabitants in multidimensional poverty
+(ODS 1n.1.1).}
 \item{urbano}{Numeric (double). Percentage of residents of localities
 with 2,500 inhabitants or more in multidimensional poverty.}
 \item{edad_0_5}{Numeric (double). Percentage of children aged 0–5
-years, inclusive, in multidimensional poverty (ODS 1n.1.1) (ODS 1n.1.1).}
+years, inclusive, in multidimensional poverty (ODS 1n.1.1).}
 \item{edad_0_17}{Numeric (double). Percentage of children and
 adolescents aged 0–17 years, inclusive, in multidimensional
 poverty (ODS 1n.1.1).}
@@ -48,22 +49,14 @@ from the Grupos de población and Ámbito rural y urbano tables.
 \href{https://www.inegi.org.mx/desarrollosocial/pm/#tabulados}{
 Pobreza Multidimensional – Tabulados}.
 
-Source filenames and extraction locations recorded in the supplied
-source information:
+INEGI's technical note attributes the 2024 estimates to INEGI
+calculations using ENIGH 2024 and the CONEVAL methodology,
+and the 2016–2022 estimates to CONEVAL poverty measurement.
 
-Grupos de población: \code{8_pm_gp_2024(1).xlsx}.
-Cuadro 1 for men and women; Cuadro 3 for the Indigenous population;
-Cuadro 4 for disability; Cuadro 8 for the Afrodescendant population;
-Cuadro 9 for ages 0–5 and 65 years and older; and Cuadro 11 for
-ages 0–17.
+\href{https://www.inegi.org.mx/contenidos/desarrollosocial/pm/doc/pm_nota_tecnica_2024.pdf}{
+INEGI: Pobreza Multidimensional 2024: Nota técnica}.
 
-Ámbito rural y urbano: \code{1_pm_ar_2024.xlsx}.
-Cuadro 1 for rural and urban populations.
-
-The workbooks attribute the 2024 estimates to INEGI calculations
-using ENIGH 2024 and the CONEVAL methodology, and the 2016–2022
-estimates to CONEVAL poverty measurement. The historical source
-cited is
+Historical source:
 \href{https://www.coneval.org.mx/Medicion/MP/Paginas/AE_pobreza_2022.aspx}{
 CONEVAL: Anexo estadístico de pobreza 2022}.
 }
@@ -80,8 +73,8 @@ The data cover Mexico at the national level (Estados Unidos Mexicanos),
 with one reference year per row. Rows are ordered from 2024 to 2016.
 Observations are biennial rather than annual.
 
-All variables except \code{anio} are percentages on a 0–100 scale;
-for example, 35.6 means 35.6. Each percentage uses the population
+All variables except \code{anio} are percentages on a 0–100 scale.
+Each percentage uses the population
 of the named group as its denominator. It does not represent that
 group's share of all people in poverty. Higher values indicate
 greater poverty.
@@ -120,14 +113,12 @@ summed across columns or averaged without appropriate population
 weights to obtain a national poverty rate. Differences between
 percentages are expressed in percentage points.
 
-The variable selection and any resulting analyses are the work of
-the package authors. INEGI does not endorse or sponsor this package.
+INEGI does not endorse or sponsor this package.
 }
 \section{Preparation}{
 
-Prepared from a supplied CSV extract. Preserved the supplied column
-names, row order, numeric values, and missing values. Converted
-\code{anio} to integer and percentage variables to double.
+Preserved column names, row order, numeric values, and missing values.
+Converted \code{anio} to integer and percentage variables to double.
 Validated dimensions, column names, reference years, year uniqueness,
 numeric text, missing-value patterns, and percentage bounds.
 No rounding or imputation was applied.

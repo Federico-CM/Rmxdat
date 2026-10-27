@@ -1,7 +1,7 @@
 # Prepare national health-services deprivation estimates, 2016–2024.
-# Input: user-supplied extract of selected INEGI tables.
+# Input: CSV extract of selected INEGI tables used for package preparation.
 # The CSV uses standardized age-group and Afrodescendant column names.
-# Preserve supplied numeric values, row order, and missing values.
+# Preserve numeric values, row order, and missing values.
 # All measures are percentages on a 0–100 scale.
 
 health_service_access_raw <- read.csv(
@@ -30,7 +30,7 @@ expected_names <- c(
 
 expected_years <- c(2024L, 2022L, 2020L, 2018L, 2016L)
 
-# Validate structure, year values, and supplied row order.
+# Validate structure, year values, and row order.
 stopifnot(
   identical(names(health_service_access_raw), expected_names),
   nrow(health_service_access_raw) == 5L,

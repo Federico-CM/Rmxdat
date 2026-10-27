@@ -136,5 +136,5 @@ pahmt_estatal <- pahmt_estatal[c(
   "importe_B"
 )]
 
-# Preserve supplied state names, row order, values, and monetary units.
+# Preserve state names, row order, values, and monetary units.
 usethis::use_data(pahmt_estatal, overwrite = TRUE)

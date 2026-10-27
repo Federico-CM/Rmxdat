@@ -79,8 +79,8 @@ not measure monetary amounts, payments, vouchers, or rehabilitation
 sessions. Monetary-support and in-kind-support counts are not added,
 to avoid double-counting the served population.
 
-Preparation preserved supplied state names, row order, and numeric
-values, including zero values for in-kind support. Geographic
+Preparation preserved state names, row order, and numeric values,
+including zero values for in-kind support. Geographic
 identifiers cve_ent and iso_3166_2 were added during preparation;
 they are not columns in the source report table.
 

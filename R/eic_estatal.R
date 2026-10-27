@@ -39,7 +39,7 @@
 #'
 #' Population-count variables are expressed as numbers of people.
 #' Median age is expressed in years. Percentage variables use a
-#' 0--100 scale; for example, 4.37 means 4.37%.
+#' 0--100 scale.
 #'
 #' The three age-group counts exclude residents whose age was
 #' unspecified and therefore need not sum to `pobtot`.
@@ -66,8 +66,7 @@
 #' ranges, and consistency between age-group counts and population
 #' totals.
 #'
-#' The variable selection and any resulting analyses are the work of
-#' the package authors. INEGI does not endorse or sponsor this package.
+#' INEGI does not endorse or sponsor this package.
 #'
 #' @section Reuse:
 #' The source data are provided under the
@@ -90,8 +89,8 @@
 #' [Encuesta Intercensal 2025 -- Open data](https://www.inegi.org.mx/programas/eic/2025/#datos_abiertos).
 #' Downloaded October 19, 2026.
 #'
-#' Variable definitions were checked against the source data
-#' descriptor supplied with the download.
+#' Variable definitions were checked against the data descriptor
+#' included in the INEGI download.
 #'
 #' ISO 3166-2 codes use the package's existing mapping, previously
 #' checked against the UK Permanent Committee on Geographical Names,

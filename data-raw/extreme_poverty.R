@@ -1,6 +1,6 @@
 # Prepare national extreme poverty estimates, 2016–2024.
-# Input: user-supplied extract of selected INEGI tables.
-# Preserve supplied column names, values, row order, and missing values.
+# Input: CSV extract of selected INEGI tables used for package preparation.
+# Preserve column names, values, row order, and missing values.
 # All measures are percentages on a 0–100 scale.
 
 extreme_poverty_raw <- read.csv(
@@ -29,7 +29,7 @@ expected_names <- c(
 
 expected_years <- c(2024L, 2022L, 2020L, 2018L, 2016L)
 
-# Validate structure, year values, and supplied row order.
+# Validate structure, year values, and row order.
 stopifnot(
   identical(names(extreme_poverty_raw), expected_names),
   nrow(extreme_poverty_raw) == 5L,
