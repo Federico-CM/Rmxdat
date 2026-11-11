@@ -248,7 +248,12 @@ preparation details, and known limitations:
 `pahmt_estatal` was manually transcribed from page 17 of the Auditoría
 Superior de la Federación's Cuenta Pública 2024 audit no. 295:
 
-[ASF audit report: Programa de Apoyo para el Bienestar de las Niñas y Niños, Hijos de Madres Trabajadoras](https://www.asf.gob.mx/Trans/Informes/IR2024b/Documentos/Auditorias/2024_0295_a.pdf)
+Auditoría Superior de la Federación (ASF).
+Cuenta Pública 2024. Secretaría de Bienestar.
+*Programa de Apoyo para el Bienestar de las Niñas y Niños,
+Hijos de Madres Trabajadoras*.
+Auditoría de Cumplimiento 2024-0-20100-19-0295-2025,
+audit no. 295, p. 17.
 
 `ppam_estatal` and `ppd_estatal` were manually transcribed from the state
 tables on printed pages 18 and 30, respectively, of the Secretaría de

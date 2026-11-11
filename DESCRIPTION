@@ -1,6 +1,6 @@
 Package: Rmxdat
 Title: Mexican Data for Monitoring Sustainable Development
-Version: 0.1.0
+Version: 0.1.1
 Authors@R:
     person("Federico", "Castro Monzon",
            email = "fcastro.rpackages@gmail.com",

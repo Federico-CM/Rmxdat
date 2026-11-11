@@ -66,8 +66,6 @@
 #' Auditoría de Cumplimiento 2024-0-20100-19-0295-2025,
 #' audit no. 295, p. 17.
 #'
-#' <https://www.asf.gob.mx/Trans/Informes/IR2024b/Documentos/Auditorias/2024_0295_a.pdf>
-#'
 #' Geographic code references:
 #'
 #' INEGI. *Clasificaciones del Censo de Población y Vivienda 2020*,
